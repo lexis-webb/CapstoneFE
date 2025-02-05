@@ -62,7 +62,7 @@
             {
                 "id": 2,
                 "title": "RESERVATION",
-                "link": "reservation"
+                "link": "/reservations/create-timeslot"
             }
         ]
     
