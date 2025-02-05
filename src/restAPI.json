@@ -147,23 +147,9 @@
                 "title": "HOME",
                 "link": "heroSection"
             },
+        
             {
                 "id": 2,
-                "title": "ABOUT US",
-                "link": "about"
-            },
-            {
-                "id": 3,
-                "title": "SERVICES",
-                "link": "qualities"
-            },
-            {
-                "id": 4,
-                "title": "TEAM",
-                "link": "team"
-            },
-            {
-                "id": 5,
                 "title": "RESERVATION",
                 "link": "reservation"
             }

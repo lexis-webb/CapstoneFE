@@ -41,7 +41,8 @@ nav .logo {
   font-size: 2rem;
 }
 nav .navLinks {
-  flex: 2;
+  flex: .3;
+  
 }
 nav .navLinks {
   display: flex;
@@ -159,7 +160,7 @@ nav svg {
   min-height: 80vh;
   justify-content: space-between;
   align-items: center;
-  background: url(/background.svg);
+  background: url(/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
