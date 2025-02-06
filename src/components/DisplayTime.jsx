@@ -38,6 +38,9 @@ const TimeSlotsList = () => {
   const handleEdit = (id) => {
     navigate(`/timeslots/edit`); // Navigate to the edit page with the time slot id
   };
+  const handleDone = () => {
+    navigate('/');  // Navigate to home page
+  };
 
   return (
     <div className="booked">
@@ -51,9 +54,11 @@ const TimeSlotsList = () => {
             <li key={timeSlot._id}>
               <p>{timeSlot.slot} on {new Date(timeSlot.date).toLocaleString()} for {timeSlot.people} people</p>
               <p>Email: {timeSlot.email}</p>
+              <div className='bookBtn'>
               <button onClick={() => deleteTimeSlot(timeSlot._id)}>Delete</button>
               <button className="edit" onClick={() => handleEdit(timeSlot._id)}>Edit</button>
-              <button className="done">Done</button>
+              <button className="done" onClick={handleDone}>Done</button>
+              </div>
             </li>
           ))
         )}
