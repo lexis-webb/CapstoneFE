@@ -17,8 +17,7 @@ const EditTimeSlot = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Here you can perform any other actions you need for your form.
-    // Then navigate to the Success page after "submitting"
+    
     navigate('/success');  // Redirect to the success page
   };
 
