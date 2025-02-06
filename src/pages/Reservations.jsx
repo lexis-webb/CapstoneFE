@@ -11,11 +11,10 @@ const Reservations = () => {
     <div>
       <h2>Reservations</h2>
 
-      {/* Navigation for different link */}
       <nav>
         <ul>
           <li>
-            <Link to="/reservations/create-timeslot">Create Reservation</Link>
+            <Link to="/reservations/create-slots">Create Reservation</Link>
           </li>
           <li>
             <Link to="/reservations/view-timeslots">View Availabe Time</Link>
@@ -25,8 +24,8 @@ const Reservations = () => {
 
       {/* Routes */}
       <Routes>
-        <Route path="create-timeslot" element={<CreateTimeSlotForm/>} />
-        <Route path="view-timeslots" element={<TimeSlotsList />} />
+        <Route path="/reservations/create-slots" element={<CreateTimeSlotForm/>} />
+        <Route path="/view-timeslots" element={<TimeSlotsList />} />
         <Route path="timeslots/delete" element={<DeleteTimeSlot/>} />
         <Route path="timeslot/edit" element={<EditTimeSlot />} />
       </Routes>

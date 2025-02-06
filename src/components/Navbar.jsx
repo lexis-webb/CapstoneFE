@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
           <NavLink
-              to="/reservations/create-timeslot" // Link to the create-time slot form page
+              to="/reservations/create-slots" // Link to the create-time slot form page
               className={({ isActive }) => (isActive ? "active-link" : "")}
               spy="true"
               smooth="true"
@@ -31,8 +31,17 @@ const Navbar = () => {
             >
               HOME
             </NavLink>
+            <NavLink
+              to="*"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              spy="true"
+              smooth="true"
+              duration={500}
+            >
+              ABOUT US
+            </NavLink>
           </div>
-          <button className="menuBtn">OUR MENU</button>
+          {/* <button className="menuBtn">OUR MENU</button> */}
         </div>
         <div className="hamburger" onClick={()=> setShow(!show)}>
                 <GiHamburgerMenu/>

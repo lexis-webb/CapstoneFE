@@ -44,7 +44,7 @@ const App = () => {
         <Route path="*" element={<NotFound/>} />
         <Route path="/reservations" element={<Reservations/>} />
         <Route path="/reservations/create-slots" element={<CreateTimeSlotForm/>} />
-        <Route path="view-timeslots" element={<TimeSlotsList />} />
+        <Route path="/view-timeslots" element={<TimeSlotsList />} />
         <Route path="/timeslots/edit" element={<EditTimeSlot />} />
         {/* <Route path="/timeslots/delete" element={<deleteTimeSlot />} /> */}
       </Routes>
