@@ -10,7 +10,7 @@ const EditTimeSlot = () => {
   useEffect(() => {
     const fetchTimeSlot = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/timeslots/${id}`);
+        const res = await axios.get(`http://localhost:4000/reservations/timeslot`);
         setTimeSlot(res.data.data);
       } catch (err) {
         console.error(err);
@@ -23,7 +23,7 @@ const EditTimeSlot = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5173/api/timeslots/${id}`, timeSlot);
+      await axios.put(`http://localhost:4000/reservations/timeslots/edit`, timeSlot);
       navigate('/timeslots');  // Navigate to the list page after successful update
     } catch (err) {
       console.error('Failed to update time slot', err);

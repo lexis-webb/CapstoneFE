@@ -17,7 +17,7 @@ const Navbar = () => {
               to="/reservations/create-timeslot" // Link to the create-time slot form page
               className={({ isActive }) => (isActive ? "active-link" : "")}
               spy="true"
-              smooth={true}
+              smooth="true"
               duration={500}
             >
               RESERVATION
@@ -25,8 +25,8 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              spy={true}
-              smooth={true}
+              spy="true"
+              smooth="true"
               duration={500}
             >
               HOME

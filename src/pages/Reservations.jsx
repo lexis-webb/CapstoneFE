@@ -3,6 +3,8 @@ import EditTime from '../components/EditTime';
 import { Link } from 'react-router-dom';
 import CreateTimeSlotForm from '../components/CreateReservation';
 import TimeSlotsList from '../components/DisplayTime';
+// import { DeleteTimeSlot } from "../components/DisplayTime";
+import EditTimeSlot from '../components/EditTime';
 
 const Reservations = () => {
   return (
@@ -25,7 +27,8 @@ const Reservations = () => {
       <Routes>
         <Route path="create-timeslot" element={<CreateTimeSlotForm/>} />
         <Route path="view-timeslots" element={<TimeSlotsList />} />
-        <Route path="edit-timeslot/:id" element={<EditTime />} />
+        {/* <Route path="delete-timeslots" element={<DeleteTimeSlot/>} /> */}
+        <Route path="timeslot/edit" element={<EditTimeSlot />} />
       </Routes>
     </div>
   );
