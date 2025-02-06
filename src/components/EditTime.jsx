@@ -32,7 +32,7 @@ const EditTimeSlot = () => {
 
   return (
     <div>
-      <h2>Edit Time Slot</h2>
+      <h2>Change Reseravation</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="date"

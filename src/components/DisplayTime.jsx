@@ -21,12 +21,15 @@ const TimeSlotsList = () => {
     fetchTimeSlots();
   }, []);
 
-  // Delete time slot by id
-  const DeleteTimeSlot = async (id) => {
+  const deleteTimeSlot = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/reservations/timeslots/delete`);
+      // Send DELETE request to backend
+      await axios.delete(`http://localhost:4000/reservations/timeslots/delete`, { data: { id } });
+
+      // Remove the deleted time slot from the state
       setTimeSlots(timeSlots.filter((slot) => slot._id !== id));
     } catch (err) {
+      console.error('Failed to delete time slot', err);
       setError('Failed to delete time slot');
     }
   };
@@ -37,19 +40,23 @@ const TimeSlotsList = () => {
   };
 
   return (
-    <div className='booked'>
+    <div className="booked">
       <h2>You're All Set</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <ul>
-        {timeSlots.map((timeSlot) => (
-          <li key={timeSlot._id}>
-            <p>{timeSlot.slot} on {timeSlot.date} for {timeSlot.people} people</p>
-            <p>Email: {timeSlot.email}</p>
-            <button onClick={() => DeleteTimeSlot(timeSlot._id)}>Delete</button>
-            <button className="edit" onClick={() => handleEdit(timeSlot._id)}>Edit</button>
-            <button className="done">Done</button>
-          </li>
-        ))}
+        {timeSlots.length === 0 ? (
+          <li>No time slots available.</li>
+        ) : (
+          timeSlots.map((timeSlot) => (
+            <li key={timeSlot._id}>
+              <p>{timeSlot.slot} on {new Date(timeSlot.date).toLocaleString()} for {timeSlot.people} people</p>
+              <p>Email: {timeSlot.email}</p>
+              <button onClick={() => deleteTimeSlot(timeSlot._id)}>Delete</button>
+              <button className="edit" onClick={() => handleEdit(timeSlot._id)}>Edit</button>
+              <button className="done">Done</button>
+            </li>
+          ))
+        )}
       </ul>
     </div>
   );

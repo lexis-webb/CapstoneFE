@@ -1,5 +1,5 @@
 import React from 'react';
-import EditTime from '../components/EditTime';  
+
 import { Link } from 'react-router-dom';
 import CreateTimeSlotForm from '../components/CreateReservation';
 import TimeSlotsList from '../components/DisplayTime';
@@ -27,7 +27,7 @@ const Reservations = () => {
       <Routes>
         <Route path="create-timeslot" element={<CreateTimeSlotForm/>} />
         <Route path="view-timeslots" element={<TimeSlotsList />} />
-        {/* <Route path="delete-timeslots" element={<DeleteTimeSlot/>} /> */}
+        <Route path="timeslots/delete" element={<DeleteTimeSlot/>} />
         <Route path="timeslot/edit" element={<EditTimeSlot />} />
       </Routes>
     </div>

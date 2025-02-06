@@ -46,6 +46,7 @@ const App = () => {
         <Route path="/reservations/create-slots" element={<CreateTimeSlotForm/>} />
         <Route path="view-timeslots" element={<TimeSlotsList />} />
         <Route path="/timeslots/edit" element={<EditTimeSlot />} />
+        {/* <Route path="/timeslots/delete" element={<deleteTimeSlot />} /> */}
       </Routes>
       <Toaster />
     </Router>
