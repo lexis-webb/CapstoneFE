@@ -15,6 +15,8 @@
 <li>React</li>
 </ul><ul>
 <li>NodeJS</li>
+</ul><ul>
+<li>HTML</li>
 </ul><h2>Setup</h2>
 <hr><p>The dependencies used are axios, react, react-do, react-icons, react-router-dom, and react-scroll.</p><h5>Steps</h5><ul>
 <li>npm run dev</li>
